@@ -38,4 +38,4 @@ $$
 
 As reasoned above, this implies that $\operatorname{Ext}_R^1(M, N) = 0$ for all $R$-modules $N$. Therefore, $M$ is projective. $\square$
 
-[^1]: [[exact-functors-commute-with-cohomology]]
+[^1]: [[tor-ext-duality-for-finitely-presented-modules]]

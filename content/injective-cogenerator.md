@@ -9,7 +9,7 @@ Let $R$ be a commutative ring. An $R$-module $C$ is a **_cogenerator_** for the 
 
 **Theorem.**
 
-Let $R$ be a commutative ring. If $I$ is an injective cogenerator for the category of left $R$-modules, then every left $R$-module $M$ can be embedded into a direct product of copies of $I$.
+Let $R$ be a commutative ring, $I$ an injective cogenerator for the category of left $R$-modules, and $M$ an $R$-module. Then $M$ can be embedded into a direct product of copies of $I$. In particular, $M=0$ iff $\operatorname{Hom}_R(M, I)=0$.
 
 _Proof._
 
