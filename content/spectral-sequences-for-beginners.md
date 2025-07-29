@@ -1,4 +1,3 @@
-<!-- spectral-sequences-for-beginners.md -->
 ---
 title: Spectral Sequences for Beginners
 description: A detailed introduction to the spectral sequence of a filtered complex and its application to double complexes.
