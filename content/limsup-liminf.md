@@ -1,7 +1,6 @@
 ---
 title: Order‑Theoretic Limsup and Liminf
 description: Introduce the general concept of limsup and liminf that applies to both the case of sequence of numbers and sequence of sets.
-draft: false
 ---
 
 **Definition (Complete lattice).**  
@@ -19,7 +18,7 @@ $$
 Define the _limit suprema_ and _limit infima_ by
 
 $$
-\operatorname*{limsup}_{n\to\infty} x_n := \operatorname*{inf}_{n} s_n ,
+\operatorname*{limsup}_{n\to\infty} x_n := \operatorname*{inf}_{n} s_n,
 \quad
 \operatorname*{liminf}_{n\to\infty} x_n := \operatorname*{sup}_{n} i_n.
 $$

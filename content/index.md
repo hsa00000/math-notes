@@ -1,6 +1,5 @@
 ---
-title: Math Notes
-draft: false
+title: Hello There!
 ---
 
 I will dump some math notes here.
