@@ -34,3 +34,7 @@ body {
 .explorer ul li a::before {
     content: "•"; // 這是要插入的內容 (圓點)
 }
+
+.data-footnote-backref {
+  display: none;
+}

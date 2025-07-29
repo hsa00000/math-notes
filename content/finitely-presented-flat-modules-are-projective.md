@@ -16,7 +16,7 @@ $$
 \tau_n: \operatorname{Tor}_n^R(M, D(N)) \longrightarrow D(\operatorname{Ext}_R^n(M, N)) .
 $$
 
-A fundamental result in homological algebra states that if $M$ is a finitely presented $R$-module, then this map $\tau_n$ is an isomorphism for all $n \ge 0$. For $n=1$, we have the isomorphism:
+A fundamental result [^1] in homological algebra states that if $M$ is a finitely presented $R$-module, then this map $\tau_n$ is an isomorphism for all $n \ge 0$. For $n=1$, we have the isomorphism:
 
 $$
 \operatorname{Tor}_1^R(M, D(N)) \cong D(\operatorname{Ext}_R^1(M, N)) .
@@ -37,3 +37,5 @@ D(\operatorname{Ext}_R^1(M, N)) = 0 .
 $$
 
 As reasoned above, this implies that $\operatorname{Ext}_R^1(M, N) = 0$ for all $R$-modules $N$. Therefore, $M$ is projective. $\square$
+
+[^1]: [[exact-functors-commute-with-cohomology]]
