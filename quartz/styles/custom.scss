@@ -1,3 +1,18 @@
+// quartz/styles/custom.scss
+
 @use "./base.scss";
 
-// put your custom CSS here!
+// 您自訂的基礎內文樣式
+body {
+    font-size: 1.5rem;
+    
+    // 2. 將數學字體粗細設定為 'normal' (400)，與內文匹配
+    font-weight: 400;
+}
+
+// --- 針對 KaTeX 的完整修正 ---
+.katex {
+    // 1. 讓數學字體大小與周圍內文一致
+    // 使用 !important 來確保此規則的優先級最高，避免被覆蓋
+    font-size: 1em !important;
+}

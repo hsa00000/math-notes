@@ -23,8 +23,11 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        // 將 header 和 body 更換為襯線字體
+        // STIX Two Text 是個很好的學術排版字體選擇
+        header: "STIX Two Text",
+        body: "STIX Two Text",
+        // 程式碼字體可以維持不變
         code: "IBM Plex Mono",
       },
       colors: {
