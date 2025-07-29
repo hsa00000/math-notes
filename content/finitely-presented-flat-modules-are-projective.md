@@ -1,4 +1,3 @@
-<!-- finitely-presented-flat-modules-are-projective.md -->
 ---
 title: Finitely Presented Flat Modules are Projective
 description: A proof that a finitely presented flat module over an arbitrary ring is projective.

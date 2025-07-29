@@ -1,4 +1,3 @@
-<!-- exact-functors-commute-with-cohomology.md -->
 ---
 title: Exact Functors Commute with (Co)homology
 description: An exact functor preserves the (co)homology of a (co)chain complex.

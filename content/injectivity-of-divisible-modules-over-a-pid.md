@@ -1,4 +1,3 @@
-<!-- injectivity-of-divisible-modules-over-a-pid.md -->
 ---
 title: Injectivity of Divisible Modules over a PID
 description: A proof that a module over a PID is injective if and only if it is divisible, with the corollary that Q/Z is an injective Z-module.

@@ -1,5 +1,3 @@
-## <!-- finitely-presented-module.md -->
-
 title: Finitely Generated Modules over Noetherian Rings are Finitely Presented
 description: A concise proof that every finitely generated module over a Noetherian ring admits a finite presentation.
 
