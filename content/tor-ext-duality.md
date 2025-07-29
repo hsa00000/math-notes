@@ -1,3 +1,4 @@
+<!-- tor-ext-duality.md -->
 ---
 title: Tor-Ext Duality
 description: The duality relationship between Tor and Ext functors for modules over a commutative ring.

@@ -1,3 +1,4 @@
+<!-- injective-cogenerator.md -->
 ---
 title: Injective Cogenerator
 description: Definition of an injective cogenerator and the proof that every module can be embedded into a product of copies of an injective cogenerator.
@@ -5,11 +6,11 @@ description: Definition of an injective cogenerator and the proof that every mod
 
 **Definition.**
 
-Let $R$ be a ring. An $R$-module $C$ is a **_cogenerator_** for the category of $R$-modules if for any nonzero $R$-module $M$ and any nonzero element $m \in M$, there exists an $R$-module homomorphism $f: M \to C$ such that $f(m) \neq 0$. An **_injective cogenerator_** is a module that is both injective and a cogenerator.
+Let $R$ be a commutative ring. An $R$-module $C$ is a **_cogenerator_** for the category of $R$-modules if for any nonzero $R$-module $M$ and any nonzero element $m \in M$, there exists an $R$-module homomorphism $f: M \to C$ such that $f(m) \neq 0$. An **_injective cogenerator_** is a module that is both injective and a cogenerator.
 
 **Theorem.**
 
-Let $R$ be a ring. If $I$ is an injective cogenerator for the category of left $R$-modules, then every left $R$-module $M$ can be embedded into a direct product of copies of $I$.
+Let $R$ be a commutative ring. If $I$ is an injective cogenerator for the category of left $R$-modules, then every left $R$-module $M$ can be embedded into a direct product of copies of $I$.
 
 _Proof._
 

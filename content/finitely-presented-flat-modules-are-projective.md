@@ -1,3 +1,4 @@
+<!-- finitely-presented-flat-modules-are-projective.md -->
 ---
 title: Finitely Presented Flat Modules are Projective
 description: A proof that a finitely presented flat module over an arbitrary ring is projective.
@@ -5,7 +6,7 @@ description: A proof that a finitely presented flat module over an arbitrary rin
 
 **Theorem.**
 
-Let $R$ be a ring. A finitely presented flat $R$-module $M$ is projective.
+Let $R$ be a commutative ring. A finitely presented flat $R$-module $M$ is projective.
 
 _Proof._
 An $R$-module $P$ is projective if and only if $\operatorname{Ext}_R^1(P, N) = 0$ for all $R$-modules $N$. Let $D(N) = \operatorname{Hom}_{\mathbb{Z}}(N, \mathbb{Q}/\mathbb{Z})$ denote the character module of an $R$-module $N$. The group $\mathbb{Q}/\mathbb{Z}$ is an injective cogenerator for the category of abelian groups. Consequently, an abelian group $G$ is zero if and only if its dual $D(G) = \operatorname{Hom}_{\mathbb{Z}}(G, \mathbb{Q}/\mathbb{Z})$ is zero. Thus, $\operatorname{Ext}_R^1(M, N) = 0$ for all $N$ if and only if $D(\operatorname{Ext}_R^1(M, N)) = 0$ for all $N$.
