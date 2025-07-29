@@ -2,4 +2,4 @@
 title: Hello There!
 ---
 
-I will dump some math notes here.
+Welcome to the depot. I dump my math notes here.
