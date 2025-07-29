@@ -1,6 +1,6 @@
 ---
-title: Math Notes
-draft: false
+title: Welcome to Quartz
 ---
 
-I will dump some math notes here.
+This is a blank Quartz installation.
+See the [documentation](https://quartz.jzhao.xyz) for how to get started.
