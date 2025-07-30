@@ -3,7 +3,7 @@ title: Finitely Presented Flat Modules are Projective
 description: A proof that a finitely presented flat R-module is projective, demonstrated through localization techniques.
 ---
 
-**Theorem 1.**
+**Theorem 1 (Localization of a Finitely Presented Module is Finitely Presented).**
 
 Let $R$ be a commutative ring, $M$ a finitely presented $R$-module, and $S$ a multiplicative subset of $R$. The localization $S^{-1}M$ is a finitely presented $S^{-1}R$-module.
 
@@ -19,7 +19,7 @@ $$
 Thus, $S^{-1}M$ is a finitely presented $S^{-1}R$-module.
 $\square$
 
-**Theorem 2.**
+**Theorem 2 (Localization of a Flat Module is Flat).**
 
 Let $R$ be a commutative ring, $M$ a flat $R$-module, and $S$ a multiplicative subset of $R$. The localization $S^{-1}M$ is a flat $S^{-1}R$-module.
 
@@ -47,7 +47,7 @@ $$
 Therefore, $S^{-1}M$ is a flat $S^{-1}R$-module.
 $\square$
 
-**Theorem 3.**
+**Theorem 3 (Hom Commutes with Localization for Finitely Presented Modules).**
 
 Let $R$ be a commutative ring, $M$ a finitely presented $R$-module, $N$ an $R$-module, and $\mathfrak{p}$ a prime ideal of $R$. There exists a canonical isomorphism of $R_\mathfrak{p}$-modules:
 $$
@@ -82,7 +82,7 @@ The kernel of the map $(N_\mathfrak{p})^n \to (N_\mathfrak{p})^m$ is $\operatorn
 The two kernels are kernels of the same map between the same modules, hence they are canonically isomorphic.
 $\square$
 
-**Theorem 4.**
+**Theorem 4 (Finitely Presented Flat Modules over a Local Ring are Free).**
 
 Let $(R, \mathfrak{m})$ be a local ring and let $M$ be a finitely presented flat $R$-module. Then $M$ is a free $R$-module of finite rank.
 
@@ -98,7 +98,7 @@ $$
 This sequence is $0 \to K/\mathfrak{m}K \to k^n \xrightarrow{\bar{\phi}} M/\mathfrak{m}M \to 0$. By construction, $\bar{\phi}$ is an isomorphism. This implies $K/\mathfrak{m}K = 0$. Since $K$ is finitely generated over the local ring $R$, Nakayama's Lemma implies $K=0$. Thus, $\phi$ is an isomorphism and $M$ is a free $R$-module of rank $n$.
 $\square$
 
-**Theorem 5.**
+**Theorem 5 (Finitely Presented and Locally Free implies Projective).**
 
 Let $M$ be a finitely presented $R$-module. If $M_\mathfrak{p}$ is a free $R_\mathfrak{p}$-module for every prime ideal $\mathfrak{p}$ of $R$, then $M$ is a projective $R$-module.
 
@@ -116,7 +116,7 @@ By hypothesis, $M_\mathfrak{p}$ is a free $R_\mathfrak{p}$-module, hence it is p
 Since $\alpha_\mathfrak{p}$ is surjective for all primes $\mathfrak{p}$, the map $\alpha$ is surjective. Therefore, there exists $s \in \operatorname{Hom}_R(M, F)$ such that $\pi \circ s = \operatorname{id}_M$. The map $\pi$ splits, and $M$ is projective.
 $\square$
 
-**Theorem 6.**
+**Theorem 6 (Finitely Presented Flat Modules are Projective).**
 
 Let $R$ be a commutative ring. If $M$ is a finitely presented flat $R$-module, then $M$ is a projective $R$-module.
 
