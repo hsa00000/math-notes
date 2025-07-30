@@ -125,3 +125,45 @@ Let $M$ be a finitely presented flat $R$-module. Let $\mathfrak{p}$ be an arbitr
 
 The module $M$ is finitely presented and locally free. By Theorem 5, a finitely presented module that is locally free is projective. Therefore, $M$ is a projective $R$-module.
 $\square$
+
+**Theorem 7 (Finitely Generated Projective is Finitely Presented).**
+
+Let $R$ be a ring. If an $R$-module $P$ is finitely generated and projective, then $P$ is finitely presented.
+
+*Proof.*
+Let $P$ be a finitely generated projective $R$-module.
+
+Since $P$ is finitely generated, there exists a surjective $R$-module homomorphism $\phi: R^n \to P$ for some integer $n \ge 0$. This gives rise to the short exact sequence:
+
+$$
+0 \to \ker(\phi) \to R^n \xrightarrow{\phi} P \to 0
+$$
+
+Because $P$ is a projective module, this short exact sequence splits. Consequently, $R^n$ is isomorphic to the direct sum of $P$ and $\ker(\phi)$.
+
+$$
+R^n \cong P \oplus \ker(\phi)
+$$
+
+Let $K = \ker(\phi)$. As $K$ is a direct summand of the finitely generated module $R^n$, it is also a finitely generated $R$-module. The projection map $\pi: R^n \to K$ maps a finite generating set of $R^n$ to a finite generating set of $K$.
+
+Since $K$ is finitely generated, there exists a surjective $R$-module homomorphism $\psi: R^m \to K$ for some integer $m \ge 0$.
+
+Let $i: K \to R^n$ be the inclusion map. The composition $i \circ \psi: R^m \to R^n$ is a homomorphism whose image is precisely $K$. We can thus form the following exact sequence:
+
+$$
+R^m \xrightarrow{i \circ \psi} R^n \xrightarrow{\phi} P \to 0
+$$
+
+This sequence, with $R^m$ and $R^n$ being finite rank free modules, satisfies the definition of $P$ being a finitely presented module.
+$\square$
+
+**Theorem 8 (Finitely Generated Projective Modules over a Local Ring are Free).**
+Let $(R, \mathfrak{m})$ be a local ring and let $M$ be a finitely generated projective $R$-module. Then $M$ is a free $R$-module of finite rank.
+
+*Proof.* Use Theorem 7, and Theorem 4, and the fact that every projective module is flat.
+
+**Theorem 9 (Finitely Generated Flat Modules over a Local Noetherian Ring are Free).**
+Let $(R, \mathfrak{m})$ be a local noetherian ring and let $M$ be a finitely generated flat $R$-module. Then $M$ is a free $R$-module of finite rank.
+
+*Proof.* A finitely generated module over a noetherian ring is finitely presented, and finitely presented flat implies projective. Now use the fact that a finitely generated projective module over a local ring is free of finite rank.
