@@ -1,6 +1,6 @@
 ---
-title: Finitely Presented Flat Modules are Projective
-description: A proof that a finitely presented flat R-module is projective, demonstrated through localization techniques.
+title: Finitely Generated Flat Modules over a Local Noetherian Ring are Free
+description: A proof that finitely generated flat modules over a local noetherian ring are free, demonstrated through localization techniques.
 ---
 
 **Theorem 1 (Localization of a Finitely Presented Module is Finitely Presented).**
