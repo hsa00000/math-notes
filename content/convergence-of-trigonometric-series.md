@@ -49,8 +49,32 @@ Let $\{S_N(x)\}$ be the sequence of partial sums. The hypothesis that the series
 3.  Combining these two points yields the stated result.
 $\square$
 
+**Theorem 2 (Necessity of Decaying Coefficients).**
+The condition $\lim_{|n| \to \infty} c_n = 0$ is necessary for the series $\sum c_n e^{inx}$ to converge on a set of positive measure.
+
+*Proof.*
+Let the series converge on a set $E$ with Lebesgue measure $\mu(E) > 0$. We first show the coefficient sequence $\{c_n\}$ is bounded, then show it converges to zero.
+
+Step 1: The sequence $\{c_n\}$ is bounded.
+Assume for contradiction that $\{c_n\}$ is unbounded. Then there exists a subsequence of indices $\{n_k\}$ such that $\gamma_k^2 = |c_{n_k}|^2 + |c_{-n_k}|^2 \to \infty$. By Theorem 1, $T_k(x) = c_{n_k} e^{in_k x} + c_{-n_k} e^{-in_k x} \to 0$ for $x \in E$. By Egorov's theorem, convergence is uniform on a subset $F \subseteq E$ with $\mu(F)>0$. The normalized functions $g_k(x) = T_k(x)/\gamma_k$ also converge to 0 uniformly on $F$. The coefficients of $g_k(x)$, namely $a_k = c_{n_k}/\gamma_k$ and $b_k = c_{-n_k}/\gamma_k$, satisfy $|a_k|^2+|b_k|^2 = 1$. Uniform convergence implies $\lim_{k\to\infty} \int_F |g_k(x)|^2 dx = 0$. We expand the integral:
+$$
+\int_F |g_k(x)|^2 dx = (|a_k|^2 + |b_k|^2)\mu(F) + a_k \overline{b_k} \int_F e^{2in_k x} dx + \overline{a_k} b_k \int_F e^{-2in_k x} dx
+$$
+$$
+= \mu(F) + a_k \overline{b_k} \int_F e^{2in_k x} dx + \overline{a_k} b_k \int_F e^{-2in_k x} dx
+$$
+The sequences $\{a_k\}$ and $\{b_k\}$ are bounded. By the Riemann-Lebesgue lemma, $\int_F e^{\pm 2in_k x} dx \to 0$. The last two terms thus vanish as $k\to\infty$. Taking the limit yields $0 = \mu(F)$, a contradiction. The sequence $\{c_n\}$ must be bounded.
+
+Step 2: The coefficients converge to zero.
+Assume for contradiction that $\lim_{|n|\to\infty} c_n \neq 0$. Then $\limsup_{|n|\to\infty} (|c_n|^2+|c_{-n}|^2) > \delta$ for some $\delta > 0$. There exists a subsequence $\{n_k\}$ with $|c_{n_k}|^2+|c_{-n_k}|^2 > \delta$. As in Step 1, $T_k(x) \to 0$ uniformly on a set $F$ with $\mu(F)>0$, which implies $\lim_{k\to\infty} \int_F |T_k(x)|^2 dx = 0$. The integral is:
+$$
+\int_F |T_k(x)|^2 dx = (|c_{n_k}|^2 + |c_{-n_k}|^2)\mu(F) + c_{n_k} \overline{c_{-n_k}} \int_F e^{2in_k x} dx + \overline{c_{n_k}} c_{-n_k} \int_F e^{-2in_k x} dx
+$$
+From Step 1, $\{c_n\}$ is bounded, so $\{c_{n_k} \overline{c_{-n_k}}\}$ is a bounded sequence. The Riemann-Lebesgue lemma ensures the integrals vanish. The last two terms thus tend to zero. Taking the limit gives $\lim_{k\to\infty} (|c_{n_k}|^2+|c_{-n_k}|^2)\mu(F) = 0$. Since $\mu(F)>0$, this implies $\lim_{k\to\infty} (|c_{n_k}|^2+|c_{-n_k}|^2)=0$, contradicting that $|c_{n_k}|^2+|c_{-n_k}|^2 > \delta$. Thus, $\lim_{|n|\to\infty} c_n = 0$.
+$\square$
+
 **Theorem (Kolmogorov).**
-The condition $\lim_{|n| \to \infty} c_n = 0$ is necessary for convergence on a set of positive measure, but it is not sufficient for pointwise convergence anywhere. There exists a sequence $\{c_n\}$ with $c_n \to 0$ for which the series $\sum c_n e^{i n x}$ diverges for every $x \in \mathbb{R}$.
+There exists a sequence $\{c_n\}$ with $c_n \to 0$ for which the series $\sum c_n e^{i n x}$ diverges for every $x \in \mathbb{R}$.
 
 *Proof.*
 The proof is a landmark result in harmonic analysis that involves the intricate construction of an $L^1$ function whose Fourier series diverges everywhere. This construction is highly advanced and is omitted. The significance of this theorem is profound: it demonstrates that there is no simple condition on the magnitude of the coefficients alone that can guarantee pointwise convergence for a general series.

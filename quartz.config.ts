@@ -30,17 +30,22 @@ const config: QuartzConfig = {
         // 程式碼字體可以維持不變
         code: "IBM Plex Mono",
       },
-      colors: {
+colors: {
         lightMode: {
-          light: "#faf8f8",
+          // Page background
+          light: "#ffffff",
+          // Borders (you can leave these or tweak as you like)
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          // Body text
+          darkgray: "#000000",
+          // Headers and icons
+          dark: "#000000",
+          // (Optional) link, hover, highlight colors:
+          secondary: "#1a0dab",
+          tertiary: "#551A8B",
+          highlight: "#ffff00",
+          textHighlight: "#ff0",
         },
         darkMode: {
           light: "#161618",
