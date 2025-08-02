@@ -30,7 +30,7 @@ const config: QuartzConfig = {
         // 程式碼字體可以維持不變
         code: "IBM Plex Mono",
       },
-colors: {
+      colors: {
         lightMode: {
           // Page background
           light: "#ffffff",
@@ -42,8 +42,10 @@ colors: {
           // Headers and icons
           dark: "#000000",
           // (Optional) link, hover, highlight colors:
-          secondary: "#1a0dab",
-          tertiary: "#551A8B",
+          // 主連結色：Tailwind blue-600
+          secondary: "#2563EB",
+          // 懸停／已訪問：Future Dusk 深藍紫
+          tertiary: "#5F4B8B",
           highlight: "#ffff00",
           textHighlight: "#ff0",
         },
