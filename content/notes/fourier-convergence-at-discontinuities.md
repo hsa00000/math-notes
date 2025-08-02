@@ -5,13 +5,11 @@ description: This note establishes the convergence criteria for Fourier series o
 
 **0. Preliminaries: A Broader Class of Functions.**
 
-To analyze functions with jump discontinuities, a class of functions less restrictive than $C^1$ is required.
+**Definition.**
+A function $f$ is ***piecewise continuous*** on a finite interval $[a, b]$ if it is continuous at every point in $[a, b]$ except for a finite number of points $x_i$, at each of which the left-hand and right-hand limits, denoted $f(x_i^-) = \lim_{t \to x_i^-} f(t)$ and $f(x_i^+) = \lim_{t \to x_i^+} f(t)$, exist and are finite.
 
-**Definition 1 (Piecewise Continuity).**
-A function $f$ is **_piecewise continuous_** on a finite interval $[a, b]$ if it is continuous at every point in $[a, b]$ except for a finite number of points $x_i$, at each of which the left-hand and right-hand limits, denoted $f(x_i^-) = \lim_{t \to x_i^-} f(t)$ and $f(x_i^+) = \lim_{t \to x_i^+} f(t)$, exist and are finite.
-
-**Definition 2 (Piecewise Smoothness).**
-A function $f$ is **_piecewise smooth_** on an interval if both the function $f$ and its derivative $f'$ are piecewise continuous on that interval. A periodic function is piecewise smooth if it is piecewise smooth on any finite interval of one period.
+**Definition.**
+A function $f$ is ***piecewise smooth*** on an interval if both the function $f$ and its derivative $f'$ are piecewise continuous on that interval. A periodic function is piecewise smooth if it is piecewise smooth on any finite interval of one period.
 
 **1. Pointwise Convergence Theorem for Piecewise Smooth Functions.**
 
@@ -19,7 +17,6 @@ The following theorem provides a definitive statement on the pointwise convergen
 
 **Theorem 1 (Dirichlet's Convergence Theorem).**
 Let $f: \mathbb{R} \to \mathbb{C}$ be a $2\pi$-periodic and piecewise smooth function. The Fourier series of $f$, denoted $S[f](x)$, converges for all $x \in \mathbb{R}$. The limit of the series is as follows:
-
 1. At any point $x$ where $f$ is continuous, the series converges to the value of the function: $S[f](x) = f(x)$.
 2. At any point of discontinuity $x_0$, the series converges to the arithmetic mean of the left-hand and right-hand limits:
 
@@ -27,81 +24,50 @@ $$
 S[f](x_0) = \frac{f(x_0^+) + f(x_0^-)}{2}
 $$
 
-_Proof._
-The $N$-th symmetric partial sum of the Fourier series, $S_N[f](x)$, can be expressed as a convolution integral with the Dirichlet kernel, $D_N(t) = \sum_{k=-N}^{N} e^{ikt}$.
-
-$$
-S_N[f](x) = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x-t) D_N(t) \,dt
-$$
-
-The Dirichlet kernel has the closed-form expression $D_N(t) = \frac{\sin((N + 1/2)t)}{\sin(t/2)}$ and satisfies $\frac{1}{2\pi} \int_{-\pi}^{\pi} D_N(t) \,dt = 1$. Let $L(x)$ denote the asserted limit of the series. At a point of continuity, $L(x)=f(x)$. At a discontinuity $x_0$, $L(x_0) = (f(x_0^+) + f(x_0^-))/2$.
-
-We analyze the difference $S_N[f](x) - L(x)$. Using the integral property of $D_N(t)$, we can write:
+*Proof.*
+The $N$-th symmetric partial sum of the Fourier series, $S_N[f](x)$, is the convolution of $f$ with the Dirichlet kernel $D_N(t) = \sum_{k=-N}^{N} e^{ikt} = \frac{\sin((N + 1/2)t)}{\sin(t/2)}$. Let $L(x)$ be the asserted limit.
 
 $$
 S_N[f](x) - L(x) = \frac{1}{2\pi} \int_{-\pi}^{\pi} (f(x-t) - L(x)) D_N(t) \,dt
 $$
 
-Substituting the closed form for $D_N(t)$:
+The integral is split at $t=0$, and a change of variable $u=-t$ is applied to the integral over $[-\pi, 0]$.
 
 $$
-S_N[f](x) - L(x) = \frac{1}{2\pi} \int_{-\pi}^{\pi} \frac{f(x-t) - L(x)}{\sin(t/2)} \sin\left(\left(N + \frac{1}{2}\right)t\right) \,dt
+\int_{-\pi}^{0} \frac{f(x-t)-L(x)}{\sin(t/2)} \sin\left(\left(N+\frac{1}{2}\right)t\right)dt = \int_{0}^{\pi} \frac{f(x+u)-L(x)}{\sin(u/2)} \sin\left(\left(N+\frac{1}{2}\right)u\right)du
 $$
 
-Let the function $g(t)$ be defined as $g(t) = \frac{f(x-t) - L(x)}{\sin(t/2)}$. The core of the proof is to show that $g(t)$ is an integrable function on $[-\pi, \pi]$. The only point of concern is the behavior as $t \to 0$.
-
-As $t \to 0^+$, $x-t \to x^-$. The limit of the numerator is $f(x^-) - L(x)$.
-As $t \to 0^-$, $x-t \to x^+$. The limit of the numerator is $f(x^+) - L(x)$.
-In either case of continuity or discontinuity, the definition of $L(x)$ and the piecewise smoothness of $f$ (which guarantees the existence of one-sided derivatives) ensures that the limit of $g(t)$ as $t \to 0$ is finite. Specifically, by using the approximation $\sin(t/2) \approx t/2$ and applying L'Hôpital's rule, the limit is shown to depend on the one-sided derivatives of $f$ at $x$.
-
-Since $g(t)$ is integrable, the Riemann-Lebesgue Lemma applies. The lemma states that for any $g \in L^1([-\pi, \pi])$, $\lim_{\lambda \to \infty} \int_{-\pi}^{\pi} g(t) \sin(\lambda t) \,dt = 0$. In our case, $\lambda = N + 1/2$.
-
-Therefore, as $N \to \infty$, the integral vanishes.
+Combining this with the integral over $[0, \pi]$ yields:
 
 $$
-\lim_{N \to \infty} (S_N[f](x) - L(x)) = 0
+S_N[f](x) - L(x) = \frac{1}{2\pi} \int_0^\pi \frac{f(x+t) + f(x-t) - 2L(x)}{\sin(t/2)} \sin\left(\left(N+\frac{1}{2}\right)t\right) dt
 $$
 
-This establishes that the Fourier series converges to the stated value $L(x)$. $\square$
-
-**Example: The Sawtooth Wave.**
-
-**Definition.**
-Consider the function $f(x)=x$ on the interval $[0, 2\pi)$, extended periodically to all of $\mathbb{R}$. This function has jump discontinuities at every $x = 2k\pi$ for $k \in \mathbb{Z}$.
-
-_Proof._
-We compute the Fourier coefficients of $f(x)=x$ on $[0, 2\pi)$.
-The zeroth coefficient is
+Let $h(t) = \frac{f(x+t) + f(x-t) - 2L(x)}{\sin(t/2)}$. For the Riemann-Lebesgue Lemma to apply, $h(t)$ must be integrable on $[0, \pi]$. The only point of concern is the behavior as $t \to 0^+$. The limit is an indeterminate form $\frac{0}{0}$ because $\lim_{t \to 0^+} (f(x+t) + f(x-t) - 2L(x)) = f(x^+) + f(x^-) - 2L(x) = 0$. By L'Hôpital's rule:
 
 $$
-c_0[f] = \frac{1}{2\pi} \int_0^{2\pi} x \, dx = \frac{1}{2\pi} \left[\frac{x^2}{2}\right]_0^{2\pi} = \pi.
+\lim_{t \to 0^+} h(t) = \lim_{t \to 0^+} \frac{f'(x+t) - f'(x-t)}{\frac{1}{2}\cos(t/2)} = \frac{f'(x^+) - f'(x^-)}{1/2} = 2(f'(x^+) - f'(x^-))
 $$
 
-For $n \ne 0$, we use integration by parts with $u=x$ and $dv=e^{-inx}dx$.
+Since $f$ is piecewise smooth, $f'$ is piecewise continuous. Thus, the one-sided limits $f'(x^+)$ and $f'(x^-)$ are finite, which implies $\lim_{t \to 0^+} h(t)$ is finite. Therefore, $h(t)$ is integrable on $[0, \pi]$. The Riemann-Lebesgue Lemma states that $\lim_{N \to \infty} \int_0^\pi h(t) \sin(((N+1/2))t) dt = 0$. Consequently, $\lim_{N \to \infty} (S_N[f](x) - L(x)) = 0$. $\square$
+
+**2. Example: The Sawtooth Wave.**
+
+Consider the function $f(x)=x$ on the interval $[0, 2\pi)$, extended periodically to all of $\mathbb{R}$. This function has jump discontinuities at every $x = 2k\pi$ for $k \in \mathbb{Z}$. The Fourier coefficients are computed on $[0, 2\pi)$. The constant term is $c_0 = \pi$. For $n \ne 0$, integration by parts gives:
 
 $$
 \begin{align*}
 c_n[f] &= \frac{1}{2\pi} \int_0^{2\pi} x e^{-inx} dx \\
 &= \frac{1}{2\pi} \left( \left[ x \frac{e^{-inx}}{-in} \right]_0^{2\pi} - \int_0^{2\pi} \frac{e^{-inx}}{-in} dx \right) \\
-&= \frac{1}{2\pi} \left( \frac{2\pi e^{-in2\pi}}{-in} - 0 - \left[ \frac{e^{-inx}}{(-in)^2} \right]_0^{2\pi} \right) \\
-&= \frac{1}{2\pi} \left( \frac{2\pi}{-in} - 0 \right) \\
-$= \frac{1}{-in} \\
-$= \frac{i}{n}.
+&= \frac{1}{2\pi} \left( \frac{2\pi}{-in} - \left[ \frac{e^{-inx}}{(-in)^2} \right]_0^{2\pi} \right) \\
+&= \frac{1}{-in} - 0 = \frac{i}{n}
 \end{align*}
 $$
 
-The Fourier series is
+The Fourier series is $S[f](x) = \pi + \sum_{n \in \mathbb{Z}, n \ne 0} \frac{i}{n} e^{inx}$. The function $f$ is piecewise smooth. For any $x \in (0, 2\pi)$, $f$ is continuous, so $S[f](x) = f(x) = x$. At the discontinuity $x=0$, the left and right limits are $f(0^-) = 2\pi$ and $f(0^+) = 0$. By Dirichlet's Theorem, the series converges to the midpoint:
 
 $$
-S[f](x) = \pi + \sum_{n \in \mathbb{Z}, n \ne 0} \frac{i}{n} e^{inx}.
+S[f](0) = \frac{f(0^+) + f(0^-)}{2} = \frac{0 + 2\pi}{2} = \pi
 $$
 
-The function $f$ is piecewise smooth. For any $x \in (0, 2\pi)$, $f$ is continuous, so by Dirichlet's Theorem, $S[f](x) = f(x) = x$.
-At the discontinuity $x=0$, we have $f(0^+) = \lim_{t \to 0^+} f(t) = 0$ and $f(0^-) = \lim_{t \to 2\pi^-} f(t) = 2\pi$. The series converges to the midpoint:
-
-$$
-S[f](0) = \frac{f(0^+) + f(0^-)}{2} = \frac{0 + 2\pi}{2} = \pi.
-$$
-
-This matches the value of the constant term in the series.
-$\square$
+This value matches the constant term of the series. $\square$
