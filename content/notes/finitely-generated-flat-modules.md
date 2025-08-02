@@ -1,6 +1,7 @@
 ---
 title: Finitely Generated Flat Modules over a Local Noetherian Ring are Free
 description: A proof that finitely generated flat modules over a local noetherian ring are free, demonstrated through localization techniques.
+date: 2025-07-31
 ---
 
 **Theorem 1 (Localization of a Finitely Presented Module is Finitely Presented).**

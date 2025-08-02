@@ -42,11 +42,10 @@ export const defaultContentPageLayout: PageLayout = {
     // Recent Notes panel
     Component.RecentNotes({
       title: "Recent Notes",
-      limit: 10,
+      limit: 3,
       showTags: true,
       linkToMore: "notes" as SimpleSlug,
     }),
-    Component.Explorer(),
   ],
   right: [
     Component.Graph(),
@@ -73,11 +72,10 @@ export const defaultListPageLayout: PageLayout = {
     // Recent Notes panel for list pages
     Component.RecentNotes({
       title: "Recent Notes",
-      limit: 10,
+      limit: 3,
       showTags: true,
       linkToMore: "notes" as SimpleSlug,
     }),
-    Component.Explorer(),
   ],
   right: [],
 }
