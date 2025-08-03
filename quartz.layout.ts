@@ -6,7 +6,13 @@ import { SimpleSlug } from "./quartz/util/path"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.RecentNotes({
+      title: "Recent Notes",
+      limit: undefined,
+      showTags: true,
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
@@ -39,13 +45,6 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    // Recent Notes panel
-    Component.RecentNotes({
-      title: "Recent Notes",
-      limit: 3,
-      showTags: true,
-      linkToMore: "notes" as SimpleSlug,
-    }),
   ],
   right: [
     Component.Graph(),
@@ -68,13 +67,6 @@ export const defaultListPageLayout: PageLayout = {
         },
         { Component: Component.Darkmode() },
       ],
-    }),
-    // Recent Notes panel for list pages
-    Component.RecentNotes({
-      title: "Recent Notes",
-      limit: 3,
-      showTags: true,
-      linkToMore: "notes" as SimpleSlug,
     }),
   ],
   right: [],
