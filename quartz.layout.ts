@@ -7,10 +7,13 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
-    Component.RecentNotes({
-      title: "Recent Notes",
-      limit: undefined,
-      showTags: true,
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        title: "Recent Notes",
+        limit: undefined,
+        showTags: true,
+      }),
+      condition: (page) => page.fileData.slug === "index",
     }),
   ],
   footer: Component.Footer({
@@ -44,6 +47,15 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
       ],
+    }),
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        title: "Recent Notes",
+        limit: 5,
+        showTags: true,
+        linkToMore: "/" as SimpleSlug,
+      }),
+      condition: (page) => page.fileData.slug !== "index",
     }),
   ],
   right: [
