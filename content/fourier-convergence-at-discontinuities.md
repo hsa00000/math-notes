@@ -1,6 +1,6 @@
 ---
 title: Fourier Series Convergence for Piecewise Smooth Functions
-description: This note establishes the convergence criteria for Fourier series of piecewise smooth functions, with a specific focus on the behavior at points of continuity and at jump discontinuities.
+description: This note establishes the convergence criteria for Fourier series of piecewise $C^1$ functions, with a specific focus on the behavior at points of continuity and at jump discontinuities.
 ---
 
 **0. Preliminaries: A Broader Class of Functions.**
@@ -9,14 +9,14 @@ description: This note establishes the convergence criteria for Fourier series o
 A function $f$ is ***piecewise continuous*** on a finite interval $[a, b]$ if it is continuous at every point in $[a, b]$ except for a finite number of points $x_i$, at each of which the left-hand and right-hand limits, denoted $f(x_i^-) = \lim_{t \to x_i^-} f(t)$ and $f(x_i^+) = \lim_{t \to x_i^+} f(t)$, exist and are finite.
 
 **Definition.**
-A function $f$ is ***piecewise smooth*** on an interval if both the function $f$ and its derivative $f'$ are piecewise continuous on that interval. A periodic function is piecewise smooth if it is piecewise smooth on any finite interval of one period.
+A function $f$ is ***piecewise $C^1$*** on an interval if both the function $f$ and its derivative $f'$ are piecewise continuous on that interval. A periodic function is piecewise $C^1$ if it is piecewise $C^1$ on any finite interval of one period.
 
 **1. Pointwise Convergence Theorem for Piecewise Smooth Functions.**
 
 The following theorem provides a definitive statement on the pointwise convergence behavior of a Fourier series for a function that is well-behaved between a finite number of jump discontinuities.
 
 **Theorem 1 (Dirichlet's Convergence Theorem).**
-Let $f: \mathbb{R} \to \mathbb{C}$ be a $2\pi$-periodic and piecewise smooth function. The Fourier series of $f$, denoted $S[f](x)$, converges for all $x \in \mathbb{R}$. The limit of the series is as follows:
+Let $f: \mathbb{R} \to \mathbb{C}$ be a $2\pi$-periodic and piecewise $C^1$ function. The Fourier series of $f$, denoted $S[f](x)$, converges for all $x \in \mathbb{R}$. The limit of the series is as follows:
 1. At any point $x$ where $f$ is continuous, the series converges to the value of the function: $S[f](x) = f(x)$.
 2. At any point of discontinuity $x_0$, the series converges to the arithmetic mean of the left-hand and right-hand limits:
 
@@ -49,7 +49,7 @@ $$
 \lim_{t \to 0^+} h(t) = \lim_{t \to 0^+} \frac{f'(x+t) - f'(x-t)}{\frac{1}{2}\cos(t/2)} = \frac{f'(x^+) - f'(x^-)}{1/2} = 2(f'(x^+) - f'(x^-))
 $$
 
-Since $f$ is piecewise smooth, $f'$ is piecewise continuous. Thus, the one-sided limits $f'(x^+)$ and $f'(x^-)$ are finite, which implies $\lim_{t \to 0^+} h(t)$ is finite. Therefore, $h(t)$ is integrable on $[0, \pi]$. The Riemann-Lebesgue Lemma states that $\lim_{N \to \infty} \int_0^\pi h(t) \sin(((N+1/2))t) dt = 0$. Consequently, $\lim_{N \to \infty} (S_N[f](x) - L(x)) = 0$. $\square$
+Since $f$ is piecewise $C^1$, $f'$ is piecewise continuous. Thus, the one-sided limits $f'(x^+)$ and $f'(x^-)$ are finite, which implies $\lim_{t \to 0^+} h(t)$ is finite. Therefore, $h(t)$ is integrable on $[0, \pi]$. The Riemann-Lebesgue Lemma states that $\lim_{N \to \infty} \int_0^\pi h(t) \sin(((N+1/2))t) dt = 0$. Consequently, $\lim_{N \to \infty} (S_N[f](x) - L(x)) = 0$. $\square$
 
 **2. Example: The Sawtooth Wave.**
 
@@ -64,7 +64,7 @@ c_n[f] &= \frac{1}{2\pi} \int_0^{2\pi} x e^{-inx} dx \\
 \end{align*}
 $$
 
-The Fourier series is $S[f](x) = \pi + \sum_{n \in \mathbb{Z}, n \ne 0} \frac{i}{n} e^{inx}$. The function $f$ is piecewise smooth. For any $x \in (0, 2\pi)$, $f$ is continuous, so $S[f](x) = f(x) = x$. At the discontinuity $x=0$, the left and right limits are $f(0^-) = 2\pi$ and $f(0^+) = 0$. By Dirichlet's Theorem, the series converges to the midpoint:
+The Fourier series is $S[f](x) = \pi + \sum_{n \in \mathbb{Z}, n \ne 0} \frac{i}{n} e^{inx}$. The function $f$ is piecewise $C^1$. For any $x \in (0, 2\pi)$, $f$ is continuous, so $S[f](x) = f(x) = x$. At the discontinuity $x=0$, the left and right limits are $f(0^-) = 2\pi$ and $f(0^+) = 0$. By Dirichlet's Theorem, the series converges to the midpoint:
 
 $$
 S[f](0) = \frac{f(0^+) + f(0^-)}{2} = \frac{0 + 2\pi}{2} = \pi
