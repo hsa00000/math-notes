@@ -6,10 +6,10 @@ description: This note establishes the convergence criteria for Fourier series o
 **0. Preliminaries: A Broader Class of Functions.**
 
 **Definition.**
-A function $f$ is ***piecewise continuous*** on a finite interval $[a, b]$ if it is continuous at every point in $[a, b]$ except for a finite number of points $x_i$, at each of which the left-hand and right-hand limits, denoted $f(x_i^-) = \lim_{t \to x_i^-} f(t)$ and $f(x_i^+) = \lim_{t \to x_i^+} f(t)$, exist and are finite.
+A function $f$ is **_piecewise continuous_** on a finite interval $[a, b]$ if it is continuous at every point in $[a, b]$ except for a finite number of points $x_i$, at each of which the left-hand and right-hand limits, denoted $f(x_i^-) = \lim_{t \to x_i^-} f(t)$ and $f(x_i^+) = \lim_{t \to x_i^+} f(t)$, exist and are finite.
 
 **Definition.**
-A function $f$ is ***piecewise $C^1$*** on an interval if both the function $f$ and its derivative $f'$ are piecewise continuous on that interval. A periodic function is piecewise $C^1$ if it is piecewise $C^1$ on any finite interval of one period.
+A function $f$ is **_piecewise $C^1$_** on an interval if both the function $f$ and its derivative $f'$ are piecewise continuous on that interval. A periodic function is piecewise $C^1$ if it is piecewise $C^1$ on any finite interval of one period.
 
 **1. Pointwise Convergence Theorem for Piecewise Smooth Functions.**
 
@@ -17,6 +17,7 @@ The following theorem provides a definitive statement on the pointwise convergen
 
 **Theorem 1 (Dirichlet's Convergence Theorem).**
 Let $f: \mathbb{R} \to \mathbb{C}$ be a $2\pi$-periodic and piecewise $C^1$ function. The Fourier series of $f$, denoted $S[f](x)$, converges for all $x \in \mathbb{R}$. The limit of the series is as follows:
+
 1. At any point $x$ where $f$ is continuous, the series converges to the value of the function: $S[f](x) = f(x)$.
 2. At any point of discontinuity $x_0$, the series converges to the arithmetic mean of the left-hand and right-hand limits:
 
@@ -24,7 +25,7 @@ $$
 S[f](x_0) = \frac{f(x_0^+) + f(x_0^-)}{2}
 $$
 
-*Proof.*
+_Proof._
 The $N$-th symmetric partial sum of the Fourier series, $S_N[f](x)$, is the convolution of $f$ with the Dirichlet kernel $D_N(t) = \sum_{k=-N}^{N} e^{ikt} = \frac{\sin((N + 1/2)t)}{\sin(t/2)}$. Let $L(x)$ be the asserted limit.
 
 $$
