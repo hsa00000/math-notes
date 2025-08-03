@@ -74,7 +74,7 @@ _Proof._
 1.  **$L^2$ Convergence:** This is the **Riesz-Fischer Theorem**. It is a cornerstone of the Hilbert space theory of Fourier analysis, proving that the partial sums $S_N[f]$ form a Cauchy sequence in the complete space $L^2([0, 2\pi])$ which converges to $f$. Its proof is foundational to functional analysis and is stated here without derivation.
 
 2.  **Pointwise Convergence:** This proof perfectly links the function space to our theorems from Lecture 1.
-    _ **Analyze the Coefficients:** A direct consequence of the $L^2$ theory is **Parseval's Identity**: $\sum_{n=-\infty}^{\infty} |c_n[f]|^2 = \frac{1}{2\pi} \int_0^{2\pi} |f(x)|^2 \,dx$. Since $f \in L^2$, the integral on the right is finite by definition. Therefore, the sum of the squared magnitudes of the coefficients is finite. This proves that the sequence of Fourier coefficients $\{c_n[f]\}$ is a member of the space $\ell^2(\mathbb{Z})$.
+    **Analyze the Coefficients:** A direct consequence of the $L^2$ theory is **Parseval's Identity**: $\sum_{n=-\infty}^{\infty} |c_n[f]|^2 = \frac{1}{2\pi} \int_0^{2\pi} |f(x)|^2 \,dx$. Since $f \in L^2$, the integral on the right is finite by definition. Therefore, the sum of the squared magnitudes of the coefficients is finite. This proves that the sequence of Fourier coefficients $\{c_n[f]\}$ is a member of the space $\ell^2(\mathbb{Z})$.
     - **Apply Lecture 1 Theorem:** Our "series-first" lecture presented **Carleson's Theorem**, a deep result stating that if a sequence $\{c_n\}$ is in $\ell^2$, its trigonometric series $\sum c_n e^{inx}$ converges pointwise for almost every $x$. \* **Conclusion:** Since the coefficients of our $L^2$ function belong to $\ell^2$, Carleson's theorem directly applies and guarantees that $S[f](x)$ converges pointwise almost everywhere to $f(x)$.
       $\square$
 
@@ -103,7 +103,6 @@ The strategy is to show that the coefficients $\{c_n[f]\}$ are absolutely summab
     Periodicity of both $f(x)$ and $e^{-inx}$ makes the boundary term zero. The remaining integral is $2\pi c_n[f]$. This gives the crucial decay-rate relationship: $c_n[f] = \frac{c_n[f']}{in}$.
 
 2.  **Establish Absolute Summability:** We must prove $\sum |c_n[f]| < \infty$.
-
     - Since $f \in C^1$, its derivative $f'$ is continuous on $[0, 2\pi]$. Any continuous function on a compact interval is in $L^2$. Thus, $f' \in L^2$.
     - This implies the coefficients of $f'$ are square-summable: $\{c_n[f']\} \in \ell^2$.
     - To bound the sum $\sum |c_n[f]| = \sum_{n \ne 0} \frac{1}{|n|} |c_n[f']|$, we use the **Cauchy-Schwarz inequality**: $(\sum a_k b_k)^2 \le (\sum a_k^2)(\sum b_k^2)$.
