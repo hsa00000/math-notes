@@ -18,6 +18,7 @@ $$
 
 _Proof._
 ($\Leftarrow$) Assume there exists such a function $f$. If $\lambda(A)=0$, then the integral $\int_A f(x) \,d\lambda(x)$ is zero by properties of the Lebesgue integral. Thus, $P(A)=0$, which implies $P \ll \lambda$.
+
 ($\Rightarrow$) Assume $P \ll \lambda$. Since $P$ is a finite measure (as $P(\mathbb{R})=1$) and $\lambda$ is a $\sigma$-finite measure, the Radon-Nikodym theorem guarantees the existence of a non-negative, measurable function $f$ such that $P(A) = \int_A f(x) \,d\lambda(x)$ for all $A \in \mathcal{B}(\mathbb{R})$. This function $f$ is the Radon-Nikodym derivative $dP/d\lambda$.
 $\square$
 
@@ -35,6 +36,7 @@ P(S) = \sum_{x \in S} P(\{x\}) = \sum_{x \in S} p(x)
 $$
 
 Since $P(S)=1$, it follows that $\sum_{x \in S} p(x)=1$.
+
 ($\Leftarrow$) Given a countable set $S$ and a function $p: S \to [0, 1]$ with $\sum_{x \in S} p(x)=1$, define a measure $P$ for any $A \in \mathcal{B}(\mathbb{R})$ by $P(A) = \sum_{x \in A \cap S} p(x)$. This function $P$ is a probability measure, and since $P(S) = \sum_{x \in S \cap S} p(x) = 1$, it is a discrete measure.
 $\square$
 
@@ -49,7 +51,9 @@ A probability measure $P$ with CDF $F$ is singular continuous if and only if $F$
 
 _Proof._
 Let $P$ be a probability measure on $(\mathbb{R}, \mathcal{B}(\mathbb{R}))$. By the Lebesgue Decomposition Theorem relative to the Lebesgue measure $\lambda$, $P$ can be uniquely written as $P = P_{ac} + P_s$, where $P_{ac} \ll \lambda$ and $P_s \perp \lambda$. The CDF $F$ of $P$ is likewise a sum $F = F_{ac} + F_s$, where $F_{ac}$ and $F_s$ are the CDFs of $P_{ac}$ and $P_s$, respectively. By the Radon-Nikodym theorem, there exists a density $f = dP_{ac}/d\lambda$ such that $F_{ac}(x) = \int_{-\infty}^x f(t) d\lambda(t)$. A fundamental result of measure theory states that $F'(x)$ exists $\lambda$-a.e. and is given by $F'(x) = f(x) + F_s'(x)$. Furthermore, the derivative of the CDF of a singular measure is zero $\lambda$-a.e., so $F_s'(x)=0$ a.e. This establishes that $F'(x) = f(x)$ for $\lambda$-almost all $x$.
+
 ($\Rightarrow$) Assume $P$ is singular continuous. By definition, its CDF $F$ is continuous. Also by definition, $P$ is singular with respect to $\lambda$. In the decomposition $P = P_{ac} + P_s$, the singularity of $P$ implies that its absolutely continuous component $P_{ac}$ must be the zero measure. Consequently, the density $f = dP_{ac}/d\lambda$ must be the zero function a.e. Since $F'(x) = f(x)$ a.e., it follows that $F'(x) = 0$ a.e.
+
 ($\Leftarrow$) Assume $F$ is continuous and $F'(x)=0$ for $\lambda$-almost all $x$. The density of the absolutely continuous part of $P$ is given by $f(x) = F'(x)$ a.e. By assumption, $F'(x)=0$ a.e., so $f(x)=0$ a.e. This implies that the absolutely continuous measure $P_{ac}$ is the zero measure, since
 
 $$
