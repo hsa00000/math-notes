@@ -1,27 +1,48 @@
 ---
-title: Injectivity of Divisible Modules over a PID
-description: A proof that a module over a PID is injective if and only if it is divisible, with the corollary that Q/Z is an injective Z-module.
+title: Injectivity of Divisible Modules over PIDs and of Torsion-Free Divisible Modules over Domains
+description: Baer’s criterion and a uniform annihilation argument yield injectivity results for divisible modules over principal ideal domains and for torsion-free divisible modules over integral domains.
 date: 2025-08-03
 ---
 
-**Definition.**
+**Injectivity of Divisible Modules over PIDs and of Torsion-Free Divisible Modules over Domains.**
 
-Let $R$ be an integral domain. An $R$-module $M$ is ***divisible*** if for every $m \in M$ and every non-zero $r \in R$, there exists an element $x \in M$ such that $rx = m$.
+**Definition (Integral Domain).** A commutative ring $R$ with $1 \neq 0$ is an **_integral domain_** if for all $a,b \in R$, $ab=0$ implies $a=0$ or $b=0$.
 
-**Theorem.**
+**Definition (Principal Ideal Domain).** A commutative ring $R$ with $1 \neq 0$ is a **_principal ideal domain_** if $R$ is an integral domain and every ideal $I \subseteq R$ has the form $I=(a)$ for some $a \in R$.
 
-Let $R$ be a Principal Ideal Domain (PID). An $R$-module $D$ is injective if and only if it is divisible.
+**Definition (Torsion-Free Module).** Let $R$ be a domain. An $R$-module $M$ is **_torsion-free_** if for all $0 \neq r \in R$ and $m \in M$, $rm=0$ implies $m=0$.
 
-*Proof.*
-Assume $D$ is an injective $R$-module. Let $d \in D$ and $0 \neq r \in R$. Consider the ideal $I = (r)$. Define an $R$-module homomorphism $f: (r) \to D$ by $f(sr) = sd$. This map is well-defined as $R$ is an integral domain. By the injectivity of $D$, there exists an extension $\tilde{f}: R \to D$ such that $\tilde{f}|_{(r)} = f$. Let $x = \tilde{f}(1) \in D$. Then $rx = r\tilde{f}(1) = \tilde{f}(r) = f(r) = d$. Thus, $D$ is divisible.
+**Definition (Divisible Module).** Let $R$ be a domain. An $R$-module $M$ is **_divisible_** if for every $0 \neq r \in R$ and every $m \in M$ there exists $x \in M$ with $rx=m$.
 
-Conversely, assume $D$ is a divisible $R$-module. By Baer's Criterion, it suffices to show that any homomorphism $f: I \to D$ from an ideal $I$ of $R$ extends to a homomorphism $\tilde{f}: R \to D$. Since $R$ is a PID, $I=(r)$ for some $r \in R$. If $r=0$, the extension is trivial. Assume $r \neq 0$. Let $f(r) = d \in D$. As $D$ is divisible, there exists an element $x \in D$ such that $rx=d$. Define $\tilde{f}: R \to D$ by $\tilde{f}(s) = sx$. This is an $R$-module homomorphism. For any element $sr \in (r)$, we have $\tilde{f}(sr) = (sr)x = s(rx) = sd$. We also have $f(sr) = sf(r) = sd$. Thus, $\tilde{f}$ extends $f$. By Baer's Criterion, $D$ is an injective $R$-module.
-$\\square$
+**Definition (Injective Module).** Let $R$ be a commutative ring with $1 \neq 0$. An $R$-module $M$ is **_injective_** if for every monomorphism of $R$-modules $A \hookrightarrow B$, every $R$-linear map $A \to M$ extends to an $R$-linear map $B \to M$.
 
-**Theorem.**
+**Theorem (Baer’s Criterion).** Let $R$ be a commutative ring with $1 \neq 0$ and let $M$ be an $R$-module. The module $M$ is injective if and only if for every ideal $I \subseteq R$, every $R$-linear map $f:I \to M$ extends to an $R$-linear map $F:R \to M$ with $F|_I=f$.
 
-The $\mathbb{Z}$-module $\mathbb{Q}/\mathbb{Z}$ is injective.
+**Theorem (Divisible over PID $\Rightarrow$ Injective).** Let $R$ be a principal ideal domain and let $M$ be a divisible $R$-module. Then $M$ is injective.
 
-*Proof.*
-The ring of integers $\mathbb{Z}$ is a PID. We show that $\mathbb{Q}/\mathbb{Z}$ is a divisible $\mathbb{Z}$-module. Let $q + \mathbb{Z} \in \mathbb{Q}/\mathbb{Z}$ for some $q \in \mathbb{Q}$, and let $n \in \mathbb{Z}$ be a non-zero integer. We seek an element $x + \mathbb{Z} \in \mathbb{Q}/\mathbb{Z}$ such that $n(x+\mathbb{Z}) = q+\mathbb{Z}$. Let $x = q/n$. Since $q \in \mathbb{Q}$ and $n \in \mathbb{Z}$ is non-zero, $x \in \mathbb{Q}$. Then $n(x+\mathbb{Z}) = nx + \mathbb{Z} = n(q/n) + \mathbb{Z} = q + \mathbb{Z}$. Thus, $\mathbb{Q}/\mathbb{Z}$ is divisible. Since $\mathbb{Z}$ is a PID and $\mathbb{Q}/\mathbb{Z}$ is a divisible $\mathbb{Z}$-module, it is injective by the preceding theorem.
-$\square$
+_Proof._ By Baer’s criterion it suffices to extend $f:I \to M$ for an ideal $I \subseteq R$. If $I=(0)$ take $F=0$. If $I=(a)$ with $a \neq 0$, set $m:=f(a)$ and choose $x \in M$ with $ax=m$ by divisibility. Define $F:R \to M$ by $F(r):=rx$. Then for all $r \in R$,
+
+$$
+\begin{align*}
+F(ar)&=arx=rax=rf(a)=f(ar),
+\end{align*}
+$$
+
+so $F|_{(a)}=f$. Hence $M$ is injective. $\square$
+
+**Theorem (Torsion-Free Divisible over Domain $\Rightarrow$ Injective).** Let $R$ be an integral domain and let $M$ be an $R$-module that is torsion-free and divisible. Then $M$ is injective.
+
+_Proof._ By Baer’s criterion it is enough to extend $f:I \to M$ for an ideal $I \subseteq R$. If $I=(0)$ take $F=0$. Otherwise choose $0 \neq a \in I$ and set $m_b:=f(b)$ for $b \in I$. By divisibility choose $x \in M$ with $ax=m_a$. For any $b \in I$,
+
+$$
+\begin{align*}
+a\big(bx-m_b\big)
+&=abx-a m_b
+= b(ax)-a m_b
+= b m_a-a m_b \\
+&= f(ba)-f(ab)
+= 0.
+\end{align*}
+$$
+
+Since $a \neq 0$ and $M$ is torsion-free, $bx-m_b=0$. Thus $bx=f(b)$ for all $b \in I$. Define $F:R \to M$ by $F(r):=rx$. Then $F$ is $R$-linear and $F|_I=f$. Hence $M$ is injective. $\square$
