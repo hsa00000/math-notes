@@ -99,6 +99,7 @@ $$
 $$
 
 This establishes existence.
+
 **Uniqueness.** Suppose
 
 $$
