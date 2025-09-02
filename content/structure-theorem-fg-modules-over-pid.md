@@ -1,6 +1,7 @@
 ---
 title: Structure Theorem for Finitely Generated Modules over a PID
 description: This note covers the Smith Normal Form, the structure theorem for finitely generated modules over a PID, including invariant factors and elementary divisors, and an application to torsion-free modules.
+date: 2025-08-24
 ---
 
 **Smith Normal Form.**
