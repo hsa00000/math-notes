@@ -1,6 +1,6 @@
 ---
-title: Equivalence of Casimir Element Expressions for gl₂(ℝ)
-description: A proof demonstrating the equivalence of two standard formulas for the quadratic Casimir element of the general linear Lie algebra gl₂(ℝ).
+title: Equivalence of Casimir Element Expressions for gl(2,R)
+description: A proof demonstrating the equivalence of two standard formulas for the quadratic Casimir element of the general linear Lie algebra gl(2,R).
 ---
 
 **Definition 1 (Standard Basis and Casimir Element).**
