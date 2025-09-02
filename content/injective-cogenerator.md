@@ -1,7 +1,7 @@
 ---
 title: Injective Cogenerator
 description: Definition of an injective cogenerator and the proof that every module can be embedded into a product of copies of an injective cogenerator.
-date: 2025-07-29
+date: 2025-08-04
 ---
 
 **Definition.**

@@ -1,7 +1,7 @@
 ---
-title: "Fourier Series of Functions: A Comprehensive Analysis of Convergence and Smoothness"
+title: "Fourier Series of Functions II: Fourier Series Expansion"
 description: This note provides a complete and detailed analysis of the convergence properties and resulting smoothness of a function's Fourier series. The behavior for each classical function space ($L^2$, C⁰, C¹, C^k, C^∞) is proven by rigorously analyzing the function's Fourier coefficients and applying the convergence theorems for general trigonometric series.
-date: 2025-07-31
+date: 2025-08-10
 ---
 
 **0. From Functions to Series: The Fundamental Definition.**
@@ -103,6 +103,7 @@ The strategy is to show that the coefficients $\{c_n[f]\}$ are absolutely summab
     Periodicity of both $f(x)$ and $e^{-inx}$ makes the boundary term zero. The remaining integral is $2\pi c_n[f]$. This gives the crucial decay-rate relationship: $c_n[f] = \frac{c_n[f']}{in}$.
 
 2.  **Establish Absolute Summability:** We must prove $\sum |c_n[f]| < \infty$.
+
     - Since $f \in C^1$, its derivative $f'$ is continuous on $[0, 2\pi]$. Any continuous function on a compact interval is in $L^2$. Thus, $f' \in L^2$.
     - This implies the coefficients of $f'$ are square-summable: $\{c_n[f']\} \in \ell^2$.
     - To bound the sum $\sum |c_n[f]| = \sum_{n \ne 0} \frac{1}{|n|} |c_n[f']|$, we use the **Cauchy-Schwarz inequality**: $(\sum a_k b_k)^2 \le (\sum a_k^2)(\sum b_k^2)$.

@@ -1,6 +1,7 @@
 ---
-title: Fourier Series Convergence for Piecewise Smooth Functions
+title: "Fourier Series of Functions III: Fourier Series Expansion for Piecewise Smooth Functions"
 description: This note establishes the convergence criteria for Fourier series of piecewise $C^1$ functions, with a specific focus on the behavior at points of continuity and at jump discontinuities.
+date: 2025-08-11
 ---
 
 **0. Preliminaries: A Broader Class of Functions.**
