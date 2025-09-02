@@ -7,6 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
+    // Keep RecentNotes on the homepage
     Component.ConditionalRender({
       component: Component.RecentNotes({
         title: "Recent Notes",
@@ -14,6 +15,18 @@ export const sharedPageComponents: SharedLayout = {
         showTags: true,
       }),
       condition: (page) => page.fileData.slug === "index",
+    }),
+    // On non-homepage, show only on mobile, after body, reduce limit and hide tags
+    Component.ConditionalRender({
+      component: Component.MobileOnly(
+        Component.RecentNotes({
+          title: "Recent Notes",
+          limit: 3,
+          showTags: false,
+          linkToMore: "/" as SimpleSlug,
+        }),
+      ),
+      condition: (page) => page.fileData.slug !== "index",
     }),
   ],
   footer: Component.Footer({
@@ -40,23 +53,23 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Flex({
       components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
+        { Component: Component.Search(), grow: true },
         { Component: Component.Darkmode() },
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.ConditionalRender({
-      component: Component.RecentNotes({
-        title: "Recent Notes",
-        limit: 5,
-        showTags: true,
-        linkToMore: "/" as SimpleSlug,
+    // Recent notes - desktop only
+    Component.DesktopOnly(
+      Component.ConditionalRender({
+        component: Component.RecentNotes({
+          title: "Recent Notes",
+          limit: 5,
+          showTags: true,
+          linkToMore: "/" as SimpleSlug,
+        }),
+        condition: (page) => page.fileData.slug !== "index",
       }),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
+    ),
   ],
   right: [
     Component.Graph(),
