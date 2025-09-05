@@ -1,6 +1,7 @@
 ---
 title: Tensor Products of Z-Modules
 description: Foundational results and examples for tensor products of abelian groups (Z-modules), including cyclic groups, torsion modules, divisible modules, direct sums, flatness, and localization.
+date: 2025-09-04
 ---
 
 **Tensoring a Module with the Ring.**
