@@ -1,6 +1,7 @@
 ---
 title: Application of Nagata's Criterion for Factoriality
 description: An example demonstrating the use of Nagata's Criterion to prove that the coordinate ring of the real 2-sphere is a Unique Factorization Domain (UFD).
+date: 2025-08-25T10:00:00+08:00
 ---
 
 **Definition.**

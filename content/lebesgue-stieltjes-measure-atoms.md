@@ -1,7 +1,7 @@
 ---
 title: Lebesgue–Stieltjes Measures and Atoms
 description: Relates the continuity of a non-decreasing, right-continuous function G to the atoms of its induced Lebesgue–Stieltjes measure.
-date: 2025-09-02
+date: 2025-09-02T09:00:00+08:00
 ---
 
 **Setup.**

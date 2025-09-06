@@ -1,7 +1,7 @@
 ---
 title: Exact Functors Commute with (Co)homology
 description: An exact functor preserves the (co)homology of a (co)chain complex.
-date: 2025-08-06
+date: 2025-08-06T09:00:00+08:00
 ---
 
 **Theorem.**

@@ -1,7 +1,7 @@
 ---
 title: "Fourier Series of Functions II: Fourier Series Expansion"
 description: This note provides a complete and detailed analysis of the convergence properties and resulting smoothness of a function's Fourier series. The behavior for each classical function space ($L^2$, C⁰, C¹, C^k, C^∞) is proven by rigorously analyzing the function's Fourier coefficients and applying the convergence theorems for general trigonometric series.
-date: 2025-08-10
+date: 2025-08-10T09:00:00+08:00
 ---
 
 **0. From Functions to Series: The Fundamental Definition.**

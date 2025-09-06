@@ -1,6 +1,7 @@
 ---
 title: Regular Maps and Regular Functions
 description: Establishes the one-to-one correspondence between regular maps from a quasiprojective variety to the affine line and regular functions on that variety, with an example of a regular map on projective space.
+date: 2025-08-27T10:00:00+08:00
 ---
 
 **Definitions.**

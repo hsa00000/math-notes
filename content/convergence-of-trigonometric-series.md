@@ -1,7 +1,7 @@
 ---
 title: "Fourier Series of Functions I: Trigonometric Series"
 description: This note provides a self-contained, detailed exploration of the conditions on a sequence of coefficients that determine the convergence properties of its associated trigonometric series. The theorems are presented with complete, rigorous proofs intended for a reader with a background in elementary real analysis.
-date: 2025-08-09
+date: 2025-08-09T09:00:00+08:00
 ---
 
 **0. Preliminaries.**

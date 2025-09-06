@@ -1,6 +1,7 @@
 ---
 title: "Torsion-Free and Divisible Modules over an Integral Domain"
 description: "Equivalence with K-vector spaces via the fraction field and a construction of the scalar action; generalization to total quotient rings."
+date: 2025-08-28T10:00:00+08:00
 ---
 
 **Definitions.**

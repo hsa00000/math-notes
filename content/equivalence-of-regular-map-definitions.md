@@ -1,7 +1,7 @@
 ---
 title: Equivalence of Definitions of a Regular Map
 description: A proof demonstrating that the two standard definitions of a regular map between quasiprojective varieties are equivalent.
-date: 2025-09-05
+date: 2025-09-05T09:00:00+08:00
 ---
 
 **Definitions.**

@@ -1,5 +1,8 @@
 ---
 title: Injectivity of Divisible Modules over PIDs and of Torsion-Free Divisible Modules over Domains
+description: Baer's criterion and a uniform annihilation argument yield injectivity results for divisible modules over principal ideal domains and for torsion-free divisible modules over integral domains.
+date: 2025-08-03T09:00:00+08:00
+---itle: Injectivity of Divisible Modules over PIDs and of Torsion-Free Divisible Modules over Domains
 description: Baer’s criterion and a uniform annihilation argument yield injectivity results for divisible modules over principal ideal domains and for torsion-free divisible modules over integral domains.
 date: 2025-08-03
 ---

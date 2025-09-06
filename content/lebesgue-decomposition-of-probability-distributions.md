@@ -1,7 +1,7 @@
 ---
 title: Lebesgue Decomposition of Probability Distributions (The Measure-Theoretic Approach)
 description: A formal definition of the three types of probability distributions and the statement and proof of the Lebesgue Decomposition Theorem.
-date: 2025-09-02
+date: 2025-09-02T10:00:00+08:00
 ---
 
 **Types of Distributions.**

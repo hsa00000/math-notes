@@ -1,7 +1,7 @@
 ---
 title: Order‑Theoretic Limsup and Liminf
 description: Introduce the general concept of limsup and liminf that applies to both the case of sequence of numbers and sequence of sets.
-date: 2025-08-02
+date: 2025-08-02T09:00:00+08:00
 ---
 
 **Definition (Complete lattice).**  

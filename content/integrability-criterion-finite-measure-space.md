@@ -1,6 +1,7 @@
 ---
 title: Integrability on Finite Measure Spaces via Tail Integral
 description: A proof establishing the equivalence between the integrability of a function and the vanishing limit of its tail integral on a finite measure space.
+date: 2025-08-12T10:00:00+08:00
 ---
 
 **Theorem 1 (Integrability via Tail Integral on Finite Measure Spaces).**

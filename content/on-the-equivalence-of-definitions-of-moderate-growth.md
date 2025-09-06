@@ -1,6 +1,7 @@
 ---
 title: Equivalence of Moderate Growth Definitions on GL(2,R) and SL(2,R)
 description: An analysis of the equivalence between two definitions of moderate growth for functions on GL(2,R) and SL(2,R), showing equivalence holds on SL(2,R) but not on GL(2,R) due to the behavior of the determinant.
+date: 2025-08-26T10:00:00+08:00
 ---
 
 **Definition 1.**

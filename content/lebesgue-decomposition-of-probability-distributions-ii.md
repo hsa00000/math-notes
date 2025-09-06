@@ -1,6 +1,7 @@
 ---
 title: Lebesgue Decomposition of Probability Distributions II (The CDF Approach)
 description: A decomposition of cumulative distribution functions into discrete, absolutely continuous, and singular continuous components, presented using the language of calculus without explicit measure theory.
+date: 2025-09-03T10:00:00+08:00
 ---
 
 **Types of Distributions.**
