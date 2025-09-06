@@ -1,7 +1,7 @@
 ---
 title: Tensor Products of Z-Modules II (Tensor Product of Two Fields over the Integers)
 description: An analysis of the structure of the ring for fields L and K over Z. The result depends on the characteristics of the fields and can be the zero ring, a field, a product of fields, or a ring with nilpotent elements.
-date: 2025-09-04
+date: 2025-09-04T12:01:00+08:00
 ---
 
 **Case 1: Fields with Different Characteristics.**

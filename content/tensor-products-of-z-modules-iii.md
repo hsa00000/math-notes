@@ -1,7 +1,7 @@
 ---
 title: Tensor Products of Z-Modules III (Tensor Product of R-Vector Spaces over Z)
 description: Analysis of the structure of V and W over Z where V and W are vector spaces over the real numbers R. The result is a Q-vector space of very large dimension.
-date: 2025-09-04
+date: 2025-09-04T12:02:00+08:00
 ---
 
 **Structure as an Abelian Group.**
