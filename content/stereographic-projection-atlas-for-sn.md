@@ -1,7 +1,7 @@
 ---
 title: Stereographic Projection Atlas for the n-Sphere
 description: Defines the standard 2-chart smooth atlas for the n-sphere $S^n$ using stereographic projection and verifies the smoothness of the transition maps.
-date: 2025-09-15T10:30:00+00:00
+date: 2025-09-15T10:30:00+08:00
 ---
 
 **Definition (Stereographic Atlas for $S^n$).**
