@@ -1,7 +1,7 @@
 ---
 title: Measurability of the Derivative
 description: A proof that the derivative of a real-valued differentiable function is a measurable function.
-date: 2024-05-15T14:30:00+00:00
+date: 2025-08-29
 ---
 
 **Theorem (Measurability of the Derivative).**
