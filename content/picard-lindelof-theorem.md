@@ -13,10 +13,10 @@ Let $(X, d_X)$ and $(Y, d_Y)$ be metric spaces. A function $F: U \subset X \righ
 Let $U \subset \mathbb{R}^m$ be an open set and let $F: U \rightarrow \mathbb{R}^m$ be a Lipschitz continuous vector field. For any initial point $\mathbf{x}_0 \in U$, the initial value problem (IVP)
 
 $$
-\left\{\begin{array}{l}
-\dfrac{d\mathbf{x}}{dt} = F(\mathbf{x}(t)) \\
-\mathbf{x}(0) = \mathbf{x}_0
-\end{array}\right.
+\begin{cases}
+\dfrac{d\mathbf{x}}{dt} = F(\mathbf{x}(t)), & \\[6pt]
+\mathbf{x}(0) = \mathbf{x}_0 &
+\end{cases}
 $$
 
 has a unique solution $\mathbf{x}(t)$ on some time interval $I = [-\alpha, \alpha]$ for some $\alpha > 0$. Furthermore, this solution depends continuously on the initial condition $\mathbf{x}_0$.
